@@ -2,7 +2,7 @@ def ANN(x_train, y_train, X_test, Y_test, epoc=100):
     import keras as k
     from keras.models import Sequential
     from keras.layers import Activation, Flatten
-    from keras.layers.core import Dense
+    from keras.layers import Dense
     from keras.optimizers import Adam
     from keras.metrics import categorical_crossentropy
     import numpy as np
