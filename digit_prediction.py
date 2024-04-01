@@ -61,3 +61,8 @@ predictions = y_predict.argmax(axis=1)
 print("Predicted : ", predictions, " Actual:", y_test)
 
 CNN(X_trainr, y_train, X_testr, y_test, 5)
+
+with open('metrics.txt', 'w') as outfile:
+    outfile.write("Metrics for ANN:\n")
+    outfile.write(f"Accuracy: {accuracy_score(y_test, predictions)}\n")  # Accuracy of ANN
+
