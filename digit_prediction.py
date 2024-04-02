@@ -54,8 +54,8 @@ IMG_SIZE = 28
 X_trainr = np.array(X_train).reshape(-1, IMG_SIZE, IMG_SIZE, 1)
 X_testr = np.array(X_test).reshape(-1, IMG_SIZE, IMG_SIZE, 1)
 
-model = ANN(X_train, y_train, X_test, y_test, 6)
-
+# model = ANN(X_train, y_train, X_test, y_test, 6)
+model = CNN(X_trainr, y_train, X_testr, y_test, 5)
 y_predict = model.predict(X_test)
 predictions = y_predict.argmax(axis=1)
 print("Predicted : ", predictions, " Actual:", y_test)
@@ -64,7 +64,7 @@ accuracy = accuracy_score(y_test, predictions)
 print("Accuracy:", accuracy)
 
 with open('metrics.txt', 'w') as outfile:
-    outfile.write("Metrics for ANN:\n")
+    outfile.write("Metrics for CNN:\n")
     outfile.write(f'Accuracy: {accuracy}\n')
   
-# CNN(X_trainr, y_train, X_testr, y_test, 5)
+
