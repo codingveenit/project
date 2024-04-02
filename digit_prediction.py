@@ -54,7 +54,7 @@ IMG_SIZE = 28
 X_trainr = np.array(X_train).reshape(-1, IMG_SIZE, IMG_SIZE, 1)
 X_testr = np.array(X_test).reshape(-1, IMG_SIZE, IMG_SIZE, 1)
 
-model = ANN(X_train, y_train, X_test, y_test, 5)
+model = ANN(X_train, y_train, X_test, y_test, 6)
 
 y_predict = model.predict(X_test)
 predictions = y_predict.argmax(axis=1)
